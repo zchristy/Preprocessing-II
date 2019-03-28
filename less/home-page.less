@@ -1,18 +1,27 @@
 .home {
+  @media @mobile {
+    padding: 0 20px;
+  }
 
   header {
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed @silver;
 
     img {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     h1 {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+
+      @media @mobile {
+        font-size: 3rem;
+      }
     }
 
     p {
-      margin-bottom: 20px;
+      @media @mobile {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -22,19 +31,40 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-
+    @media @mobile {
+      flex-direction: column;
+      width:100%;
+    }
 
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width:100%;
+      }
+
+      p {
+        @media @mobile {
+          font-size: 1.4rem;
+        }
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width:100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width:100%;
+        }
       }
     }
   }
@@ -42,6 +72,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -58,8 +92,22 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width:100%;
+    }
+
+    p {
+      @media @mobile {
+        font-size: 1.4rem;
+      }
+    }
+
     img {
       border-radius: 10px;
+
+      @media @mobile {
+        width:100%;
+      }
     }
   }
 
@@ -69,12 +117,28 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+      width:100%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile {
+        width:80%;
+      }
+
+      p {
+        @media @mobile {
+          font-size: 1.4rem;
+        }
+      }
+
       .btn {
-        .custom-btn();
+        .custom-btn(200px, 1.6rem);
       }
     }
   }
