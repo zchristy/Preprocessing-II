@@ -1,1 +1,22 @@
-// Mixins in here
+.custom-btn(@max-width: 200px, @font-size: 1.6rem) {
+  max-width: @max-width;
+  font-size: @font-size;
+  color: white;
+  background-color: @eastern-blue;
+  border: 2px solid @eastern-blue;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+
+  &:hover {
+    color: teal;
+    background-color: white;
+    border: 2px solid @eastern-blue;
+    cursor: pointer;
+  }
+
+  @media @mobile {
+    max-width: 100%;
+    padding: 10px 0;
+  }
+}
